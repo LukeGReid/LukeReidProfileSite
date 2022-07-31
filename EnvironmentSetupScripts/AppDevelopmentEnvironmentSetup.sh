@@ -56,6 +56,6 @@ pip3 install opentelemetry-api opentelemetry-sdk
 
 #Environment Configuration
 #Add pythonvirtualenvironment setup to bashrc if it doesn't exist already.
-if grep -q "export VIRTUALENVWRAPPER" ~/.bashrc; then
+if ! grep -q "export VIRTUALENVWRAPPER" ~/.bashrc; then
     cat "$SCRIPT_DIR/PythonVirtualEnvironmentSetup" >> ~/.bashrc
 fi
